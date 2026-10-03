@@ -21,4 +21,11 @@ public class Reservation {
     LocalDate dateFin;
     @Enumerated(EnumType.STRING)
     StatutReservation statut;
+    @OneToOne(fetch = FetchType.LAZY)
+    Contrat contrat;
+    @ManyToOne(fetch = FetchType.LAZY)
+    Client client;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    Vehicule vehicule;
 }

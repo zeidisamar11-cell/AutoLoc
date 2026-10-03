@@ -5,9 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
+import java.util.List;
 import java.time.LocalDate;
-
+import java.util.ArrayList;
 @Entity
 @Getter
 @Setter
@@ -23,4 +23,6 @@ public class Client {
     String telephone;
     String numPermis;
     LocalDate dateInscription;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
+    List<Reservation> reservations = new ArrayList<>();
 }

@@ -5,8 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,4 +26,8 @@ public class Vehicule {
     BigDecimal tarifJournalier;
     @Enumerated(EnumType.STRING)
     StatutVehicule statut;
+    @ManyToMany
+    List<Equipement>equipements=new ArrayList<>();
+    @ManyToOne(fetch = FetchType.LAZY)
+    Agence agence;
 }
