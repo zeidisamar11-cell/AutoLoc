@@ -17,7 +17,6 @@ public class IPaiementServiceImp implements IPaiementService {
     public Paiement ajouterPaiement(Paiement paiement) {
         return paiementRepository.save(paiement);
     }
-
     @Override
     public Paiement modifierPaiement(Paiement paiement) {
         return paiementRepository.save(paiement);
