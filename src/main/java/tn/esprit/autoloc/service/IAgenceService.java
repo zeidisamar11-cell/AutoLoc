@@ -1,7 +1,7 @@
 package tn.esprit.autoloc.service;
 
 import tn.esprit.autoloc.domain.Agence;
-
+import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 public interface IAgenceService {
