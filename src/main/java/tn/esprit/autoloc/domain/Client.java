@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,6 +24,7 @@ public class Client {
     String telephone;
     String numPermis;
     LocalDate dateInscription;
+    @JsonIgnore
     @OneToMany(mappedBy = "client", cascade = CascadeType.PERSIST)
     List<Reservation> reservations = new ArrayList<>();
 }

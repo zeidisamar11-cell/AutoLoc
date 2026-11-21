@@ -5,14 +5,10 @@ import lombok.RequiredArgsConstructor;
 import java.util.List;
 
 public interface IAgenceService {
-
     Agence ajouterAgence(Agence agence);
-
     Agence modifierAgence(Agence agence);
-
     List<Agence> afficherToutesAgences();
-
     Agence afficherAgenceById(Long id);
-
     void supprimerAgence(Long id);
+    Agence ajouterAgenceEtAffecterVehicules(Agence agence);
 }

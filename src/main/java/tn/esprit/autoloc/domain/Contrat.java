@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -22,8 +23,10 @@ public class Contrat {
     LocalDate dateSignature;
     BigDecimal montantTotal;
     boolean valide;
+    @JsonIgnore
     @OneToOne(mappedBy = "contrat")
     Reservation reservation;
+    @JsonIgnore
     @OneToMany(mappedBy = "contrat",cascade = CascadeType.ALL)
     List<Paiement>paiementlist=new ArrayList<>();
 }

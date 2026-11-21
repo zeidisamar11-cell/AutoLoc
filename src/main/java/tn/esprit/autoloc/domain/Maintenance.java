@@ -20,7 +20,7 @@ public class Maintenance {
     LocalDate dateDebut;
     LocalDate dateFin;
     String description;
-    @ManyToOne(cascade = CascadeType.PERSIST, fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY)
     Vehicule vehicule;
 
 }
