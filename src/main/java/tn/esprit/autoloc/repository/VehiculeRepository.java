@@ -2,6 +2,7 @@ package tn.esprit.autoloc.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import tn.esprit.autoloc.domain.Vehicule;
-
-public interface VehiculeRepository extends JpaRepository<Vehicule, Long> {
+import java.util.List;
+public interface VehiculeRepository extends JpaRepository<Vehicule,Long> {
+    List<Vehicule> findByMarque(String marque);
 }

@@ -66,4 +66,9 @@ public class IVehiculeServiceImp implements IVehiculeService {
         log.info("Rapport hebdomadaire des véhicules");
         log.info("Nombre total de véhicules : " + total);
         log.info("Rapport généré le:"+LocalDateTime.now());}
+
+    @Override
+    public List<Vehicule> retournerVehiculeParMarque(String marque) {
+        return vehiculeRepository.findByMarque(marque);
+    }
 }

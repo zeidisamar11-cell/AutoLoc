@@ -42,4 +42,9 @@ public class VehiculeController {
     public Vehicule desaffecterEquipement(@PathVariable Long idVehicule, @PathVariable Long idEquipement){
         return vehiculeService.desaffecterEquipement(idVehicule, idEquipement);
     }
+
+    @GetMapping("/marque/{marque}")
+    public List<Vehicule> retournerVehiculeParMarque(@PathVariable String marque) {
+        return vehiculeService.retournerVehiculeParMarque(marque);
+    }
 }

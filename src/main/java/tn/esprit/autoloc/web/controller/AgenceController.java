@@ -34,4 +34,8 @@ public class AgenceController {
     public Agence ajouterAgenceEtAffecterVehicules(@RequestBody Agence agence){
         return agenceService.ajouterAgenceEtAffecterVehicules(agence);
     }
+    @GetMapping("/ville/{ville}")
+    public List<Agence> retournerAgenceParVille(@PathVariable String ville) {
+        return agenceService.retournerAgenceParVille(ville);
+    }
 }
